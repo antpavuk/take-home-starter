@@ -1,4 +1,4 @@
-package io.certivity.backend.api;
+package io.certivity.backend.api.controller;
 
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;

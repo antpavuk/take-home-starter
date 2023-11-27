@@ -42,6 +42,9 @@ dependencies {
 
     // Test dependencies
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
+
+    // Parsing
+    implementation 'org.jsoup:jsoup:1.16.2'
 }
 
 tasks.named('test') {

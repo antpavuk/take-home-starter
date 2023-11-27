@@ -7,7 +7,7 @@ import org.springframework.data.mongodb.config.AbstractMongoClientConfiguration;
 import org.springframework.data.mongodb.repository.config.EnableMongoRepositories;
 
 @Configuration
-@EnableMongoRepositories(basePackages = "io.certivity.backend.api")
+@EnableMongoRepositories(basePackages = "io.certivity.backend.api.repository")
 public class MongoConfig extends AbstractMongoClientConfiguration {
 
     @Override
@@ -17,6 +17,6 @@ public class MongoConfig extends AbstractMongoClientConfiguration {
 
     @Override
     public MongoClient mongoClient() {
-        return MongoClients.create("mongodb://localhost:27017");
+        return MongoClients.create("mongodb://mongodb:27017");
     }
 }

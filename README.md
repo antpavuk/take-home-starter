@@ -1,6 +1,29 @@
 # take-home-starter
 
-## Setup
+## Docker Compose Setup
+
+To set up the entire application, including both the backend and frontend, you can use Docker Compose. This will start both the MongoDB container and the application containers.
+
+1. Navigate to the root of the project.
+
+2. Run the following command to start the containers:
+
+   ```bash
+   docker-compose up
+   ```
+
+### Testing Backend Only
+
+If you want to test only the backend using Docker Compose, run the following command from the root of the project:
+
+```bash
+cd backend
+docker-compose up
+```
+
+This will start the MongoDB container along with the backend application container.
+
+## Development Setup
 
 To Install
 

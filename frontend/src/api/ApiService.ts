@@ -1,26 +1,17 @@
-import axios from 'axios'
-import { useQuery } from 'react-query'
-
-const apiClient = axios.create({
-  baseURL: `${import.meta.env.VITE_API_HOST}`,
-  headers: {
-    'Content-type': 'application/json',
-    Accept: 'application/json',
-  },
-})
+import { useQuery } from 'react-query';
+import apiClient from './main';
 
 type CustomResponse = {
-  message: string
-}
+  message: string;
+};
 
-const useGetHelloWorld = () => {
-  return useQuery<CustomResponse, Error>(['hello'], async () => {
-    const response = await apiClient.get<CustomResponse>('/')
-    return response.data
-  })
-}
+const useGetHelloWorld = () => useQuery<CustomResponse, Error>(['hello'], async () => {
+  const response = await apiClient.get<CustomResponse>('/');
+  return response.data;
+});
 
 const ApiService = {
   useGetHelloWorld,
-}
-export default ApiService
+};
+
+export default ApiService;
